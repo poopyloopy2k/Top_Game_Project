@@ -1,141 +1,43 @@
 using UnityEngine;
-using System.Collections;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Player2DControl : MonoBehaviour
 {
-    public enum ProjectAxis { onlyX = 0, xAndY = 1 };
-    public ProjectAxis projectAxis = ProjectAxis.onlyX;
-    public float speed = 150;
-    public float addForce = 7;
-    public bool lookAtCursor;
-    public KeyCode leftButton = KeyCode.A;
-    public KeyCode rightButton = KeyCode.D;
-    public KeyCode upButton = KeyCode.W;
-    public KeyCode downButton = KeyCode.S;
-    public KeyCode addForceButton = KeyCode.Space;
-    public bool isFacingRight = true;
-    private Vector3 direction;
-    private int vertical;
-    private int horizontal;
-    private Rigidbody2D body;
-    private float rotationY;
-    private bool jump;
-    private Animator animator;
+    public float speed;
+
+    private Rigidbody2D rb;
+    private Animator anim;
+    private Vector2 moveVelocity;
 
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
-        body.fixedAngle = true;
-        animator = GetComponent<Animator>();
-        if (projectAxis == ProjectAxis.xAndY)
-        {
-            body.gravityScale = 0;
-            body.drag = 10;
-        }
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    void OnCollisionStay2D(Collision2D coll)
+    void Update()
     {
-        if (coll.transform.tag == "Ground")
-        {
-            body.drag = 10;
-            jump = true;
-        }
-    }
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        moveVelocity = moveInput.normalized * speed;
 
-    void OnCollisionExit2D(Collision2D coll)
-    {
-        if (coll.transform.tag == "Ground")
-        {
-            body.drag = 0;
-            jump = false;
-        }
-    }
+        // »зменение анимационного состо€ни€ на основе ввода пользовател€
+        anim.SetBool("isRunning", moveInput != Vector2.zero);
 
-    void FixedUpdate()
-    {
-        body.AddForce(direction * body.mass * speed);
+        // ѕолучение позиции курсора мыши
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Mathf.Abs(body.velocity.x) > speed / 100f)
+        // ѕроверка направлени€ персонажа относительно курсора мыши по оси X
+        if ((mousePosition.x < transform.position.x && transform.localScale.x > 0) ||
+            (mousePosition.x > transform.position.x && transform.localScale.x < 0))
         {
-            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * speed / 100f, body.velocity.y);
-        }
-
-        if (projectAxis == ProjectAxis.xAndY)
-        {
-            if (Mathf.Abs(body.velocity.y) > speed / 100f)
-            {
-                body.velocity = new Vector2(body.velocity.x, Mathf.Sign(body.velocity.y) * speed / 100f);
-            }
-        }
-        else
-        {
-            if (Input.GetKey(addForceButton) && jump)
-            {
-                body.velocity = new Vector2(0, addForce);
-            }
-        }
-    }
-
-    void Flip()
-    {
-        if (projectAxis == ProjectAxis.onlyX)
-        {
-            isFacingRight = !isFacingRight;
+            // –азворот персонажа
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
         }
     }
 
-    void PlayAnim()
+    private void FixedUpdate()
     {
-        if (horizontal == 0 && vertical == 0)
-        {
-            animator.SetTrigger("stayAnim");
-        }
-    }
-    void Update()
-    {
-        if (lookAtCursor)
-        {
-            Vector3 lookPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-            lookPos = lookPos - transform.position;
-            float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-
-        if (Input.GetKey(upButton)) vertical = 1;
-        else if (Input.GetKey(downButton)) vertical = -1; else vertical = 0;
-
-        if (Input.GetKey(leftButton)) horizontal = -1;
-        else if (Input.GetKey(rightButton)) horizontal = 1; else horizontal = 0;
-
-        if (horizontal > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (horizontal < 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
-
-        if (projectAxis == ProjectAxis.onlyX)
-        {
-            direction = new Vector2(horizontal, 0);
-        }
-        else
-        {
-            if (Input.GetKeyDown(addForceButton)) speed += addForce; else if (Input.GetKeyUp(addForceButton)) speed -= addForce;
-            direction = new Vector2(horizontal, vertical);
-        }
-
-        if (horizontal > 0 && !isFacingRight) Flip(); else if (horizontal < 0 && isFacingRight) Flip();
-
-        // Play animation based on movement
-        PlayAnim();
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 }
-
-   

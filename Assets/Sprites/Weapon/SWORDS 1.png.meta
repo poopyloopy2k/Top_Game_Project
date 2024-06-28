@@ -1,0 +1,994 @@
+fileFormatVersion: 2
+guid: 6e544896c66a3db468e442e352bf1e1b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SWORDS 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 141
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2084440be2c2ac548861c8018e2c2657
+      internalID: -1922719788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 139
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99a6d81bc1d2cf46b39befabbfa07fb
+      internalID: -1124398537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 140
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11c0f7e5e4bc324780e2a440f42c220
+      internalID: 1140357420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 137
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5144e1973a53a304294cba4a7fcc5e63
+      internalID: 1034454991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 130
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cbf281bd919884f8bda5007d91d664
+      internalID: -2087594429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 130
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82e359a28d862a48a2af6e7bf7608f4
+      internalID: 1880229722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 131
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb5ac06e0bdb7649a59e3cc369993ee
+      internalID: -559081864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 122
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d771c786a75284fbbde8fb38cd8899
+      internalID: -2002785550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 117
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ab7b328f830534ea76295638d83512
+      internalID: -1515944347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 117
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b712ab1c44e69ac40b38b62c59c95e54
+      internalID: -544325034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 121
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78883d5fde7ecc443b0e079f53ab89a7
+      internalID: 1225285788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5efd853b241814eaa732da4fe0b66e
+      internalID: 706107800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 102
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b14ef8bafaf4ea4281e95b284dacc65
+      internalID: -1821404656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 104
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5692445c043ec374da055134e0930bbc
+      internalID: -339216306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 106
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ba152a5f1bbb84e8e25a3f30d0922d
+      internalID: -1354161943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 89
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff1f50f91ff7204b99baf9501e0ba48
+      internalID: 930969511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 87
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eebaface0bfa16468217e2d79794676
+      internalID: -1847193985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 88
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183039db3efc24f49ab86e91ed7881a2
+      internalID: -1663631891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_18
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 89
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e7e4649a22b7a46ad14e62abaf2652
+      internalID: -453805228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 73
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bf979e874761045a8443b6cf743df7
+      internalID: -13200633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_20
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 73
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1a753448f7c404a95822a43600cde6
+      internalID: 229536040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 74
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a15144ba6f57d428bdb45a54ef3104
+      internalID: 1836571032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_22
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 71
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8d668d92213724088b5ff7d5f47c14
+      internalID: -710911363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 64
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2947c8addd7a9e42bb2ae148ef3a6f9
+      internalID: -789495568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_24
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 57
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1243b64cd45be7429441efa494043f0
+      internalID: 506323136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 61
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75558cdde24279d419ae1707017b33a1
+      internalID: 206349760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_26
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 59
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91472402c234ea34e8e855e3efd9b89d
+      internalID: -2025931167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_27
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 52
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4004e86368b8c4aa7879fc6786dc4f
+      internalID: -832305790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_28
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 42
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b8d7aaa96955440a867de600b4c575
+      internalID: -82592689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 45
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef795729e66b4ee4aaffd5bec8084d44
+      internalID: -977314346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_30
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 48
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbd55e16b2042040b984a6032b59aaa
+      internalID: -85775580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_31
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 39
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d7e5e0a1e78804bb16070f5896d897
+      internalID: -1014107426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_32
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 35
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2d10f5cdf83224e9b44485d6c75ad6
+      internalID: -785848365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_33
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 20
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf2d225d4333f948b6b4d1a6fabf56b
+      internalID: -1338256388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_34
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 29
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650e7a70293c64e4aa99984b7ef42150
+      internalID: 743070617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_35
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 19
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9808ea54a4a79114d9156e5d35a870c3
+      internalID: -447054075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 18
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2436553fc2f93684089dbca0dd6e53b8
+      internalID: -408539461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_37
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 14
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8637c3dec564d7448ef8ed9fe657989
+      internalID: 1930724826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_38
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e5f38a23814dd4da245542eee5ade2
+      internalID: -877110875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWORDS 1_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce0223ddf0e0004cbe4d0592ccf532c
+      internalID: -1045623305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SWORDS 1_0: -1922719788
+      SWORDS 1_1: -1124398537
+      SWORDS 1_10: 1225285788
+      SWORDS 1_11: 706107800
+      SWORDS 1_12: -1821404656
+      SWORDS 1_13: -339216306
+      SWORDS 1_14: -1354161943
+      SWORDS 1_15: 930969511
+      SWORDS 1_16: -1847193985
+      SWORDS 1_17: -1663631891
+      SWORDS 1_18: -453805228
+      SWORDS 1_19: -13200633
+      SWORDS 1_2: 1140357420
+      SWORDS 1_20: 229536040
+      SWORDS 1_21: 1836571032
+      SWORDS 1_22: -710911363
+      SWORDS 1_23: -789495568
+      SWORDS 1_24: 506323136
+      SWORDS 1_25: 206349760
+      SWORDS 1_26: -2025931167
+      SWORDS 1_27: -832305790
+      SWORDS 1_28: -82592689
+      SWORDS 1_29: -977314346
+      SWORDS 1_3: 1034454991
+      SWORDS 1_30: -85775580
+      SWORDS 1_31: -1014107426
+      SWORDS 1_32: -785848365
+      SWORDS 1_33: -1338256388
+      SWORDS 1_34: 743070617
+      SWORDS 1_35: -447054075
+      SWORDS 1_36: -408539461
+      SWORDS 1_37: 1930724826
+      SWORDS 1_38: -877110875
+      SWORDS 1_39: -1045623305
+      SWORDS 1_4: -2087594429
+      SWORDS 1_5: 1880229722
+      SWORDS 1_6: -559081864
+      SWORDS 1_7: -2002785550
+      SWORDS 1_8: -1515944347
+      SWORDS 1_9: -544325034
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
