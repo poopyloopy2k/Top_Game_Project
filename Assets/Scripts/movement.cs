@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player2DControl : MonoBehaviour
@@ -7,6 +8,8 @@ public class Player2DControl : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 moveVelocity;
+    //Добавил CoinManager для подбора монет
+    public CoinManager cm;
 
     void Start()
     {
@@ -39,5 +42,14 @@ public class Player2DControl : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Coin"))
+        {   
+            Destroy(other.gameObject);
+            cm.coinCount++;
+            
+        }
     }
 }
