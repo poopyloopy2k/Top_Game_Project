@@ -18,8 +18,7 @@ public class EnemyAI : MonoBehaviour
 
     private enum State
     {
-        Idle, 
-        Roaming,
+        Roaming
     }
 
     private void Start()
@@ -40,8 +39,6 @@ public class EnemyAI : MonoBehaviour
         switch (state)
         {
             default:
-            case State.Idle:
-                break;
             case State.Roaming:
                 roamingTime -= Time.deltaTime;
                 if (roamingTime < 0)
