@@ -4,19 +4,26 @@ using UnityEngine;
 public class Player2DControl : MonoBehaviour
 {
     public float speed;
-
+    public int currentHealth;
+    public int maxHealth = 100;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 moveVelocity;
     //Добавил CoinManager для подбора монет
     public CoinManager cm;
-
+    public HealthBar healthBar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
-
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -37,8 +44,13 @@ public class Player2DControl : MonoBehaviour
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-    }
 
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(20);
+        }
+    }
+    
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
