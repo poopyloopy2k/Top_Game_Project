@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private State startingState;
-    [SerializeField] private float roamingDistanceMax = 7f;
-    [SerializeField] private float roamingDistanceMin = 3f;
+    [SerializeField] private float roamingDistanceMin = 7f;
+    [SerializeField] private float roamingDistanceMax = 3f;
     [SerializeField] private float roamingTimerMax = 2f;
 
     private NavMeshAgent navMeshAgent;
@@ -18,8 +18,7 @@ public class EnemyAI : MonoBehaviour
 
     private enum State
     {
-        Idle, 
-        Roaming,
+        Roaming
     }
 
     private void Start()
@@ -40,8 +39,6 @@ public class EnemyAI : MonoBehaviour
         switch (state)
         {
             default:
-            case State.Idle:
-                break;
             case State.Roaming:
                 roamingTime -= Time.deltaTime;
                 if (roamingTime < 0)
@@ -57,6 +54,7 @@ public class EnemyAI : MonoBehaviour
     {
         roamPosition = GetRoamingPosition();
         navMeshAgent.SetDestination(roamPosition);
+        changeFacingDirection(startingPosition, roamPosition);
     }
 
     public static Vector3 GetRandomDir()
@@ -68,6 +66,19 @@ public class EnemyAI : MonoBehaviour
     {
         return startingPosition + GetRandomDir() * UnityEngine.Random.Range(roamingDistanceMin, roamingDistanceMax);
     }
+
+    private void changeFacingDirection(Vector3 sourcePosition, Vector3 targetPosition)
+    {
+        if (sourcePosition.x >  targetPosition.x)
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
 
 
 }

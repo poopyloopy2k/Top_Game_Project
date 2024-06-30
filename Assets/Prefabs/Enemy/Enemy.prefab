@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.000009589829, z: -0, w: 1}
   m_LocalPosition: {x: 4.29, y: -1.96, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2146307672567736792}
@@ -95,8 +95,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008458494, y: -0.016165523}
-  m_Size: {x: 0.37383035, y: 0.20001136}
+  m_Offset: {x: 0.015871257, y: -0.016165521}
+  m_Size: {x: 0.35900924, y: 0.20001791}
   m_Direction: 1
 --- !u!195 &2916968491237327718
 NavMeshAgent:
@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingState: 1
-  roamingDistanceMax: 7
   roamingDistanceMin: 3
+  roamingDistanceMax: 7
   roamingTimerMax: 2
 --- !u!1 &2871755598544258487
 GameObject:
