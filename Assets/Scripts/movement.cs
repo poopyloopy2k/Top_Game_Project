@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player2DControl : MonoBehaviour
 {
+
     public float speed;
 
     private Rigidbody2D rb;
