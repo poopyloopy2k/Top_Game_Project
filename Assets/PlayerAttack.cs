@@ -6,16 +6,10 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private GameObject sword;
     [SerializeField] private float meleeSpeed;
     [SerializeField] private int damage;
     float timeUntilMelee;
 
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        sword.SetActive(false);
-    }
     private void Update()
     {
         if (timeUntilMelee <= 0f) 

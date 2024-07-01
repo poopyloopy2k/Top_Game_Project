@@ -15,6 +15,12 @@ public class Player2DControl : MonoBehaviour
     public HealthBar healthBar;
     public GameObject deathPanel;
     private SpriteRenderer spriteRenderer;
+    //Для звука
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +30,7 @@ public class Player2DControl : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        audioManager.PlaySFX(audioManager.hurt);
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         if(currentHealth <= 0 )
@@ -33,6 +40,7 @@ public class Player2DControl : MonoBehaviour
     }
     void Die()
     {
+        audioManager.PlaySFX(audioManager.death);
         Debug.Log("Player is dead");
         deathPanel.SetActive(true);
         gameObject.SetActive(false);
@@ -86,7 +94,12 @@ public class Player2DControl : MonoBehaviour
         {   
             Destroy(other.gameObject);
             cm.coinCount++;
+            audioManager.PlaySFX(audioManager.coin);
             
+        }
+        if(other.gameObject.CompareTag("Collision"))
+        {
+            audioManager.PlaySFX(audioManager.wallCollision);
         }
     }
 }
