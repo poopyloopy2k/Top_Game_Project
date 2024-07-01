@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Player2DControl : MonoBehaviour
@@ -12,6 +13,8 @@ public class Player2DControl : MonoBehaviour
     //Добавил CoinManager для подбора монет
     public CoinManager cm;
     public HealthBar healthBar;
+    public GameObject deathPanel;
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,10 +22,32 @@ public class Player2DControl : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0 )
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Debug.Log("Player is dead");
+        deathPanel.SetActive(true);
+        gameObject.SetActive(false);
+
+    }
+    public void Respawn()
+    {
+        Debug.Log("Player is respawn");
+        currentHealth = maxHealth;
+        healthBar.SetHealth(maxHealth);
+        cm.ResetCoins();
+        transform.position = Vector2.zero;
+        deathPanel.SetActive(false);
+        gameObject.SetActive(true);
+
     }
     void Update()
     {
@@ -44,11 +69,11 @@ public class Player2DControl : MonoBehaviour
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(20);
         }
+
     }
     
     private void FixedUpdate()
