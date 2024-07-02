@@ -20,6 +20,12 @@ public class ChasingEnemyAI : MonoBehaviour
 
     public float stoppingDistance;
     public float retreatDistance;
+    public float speed;
+
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
+    public GameObject projectile;
 
 
 
@@ -33,6 +39,9 @@ public class ChasingEnemyAI : MonoBehaviour
     {
         startingPosition = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform; // Поиск игрока по тегу
+
+        timeBtwShots = startTimeBtwShots;
+
     }
 
     private void Awake()
@@ -40,6 +49,7 @@ public class ChasingEnemyAI : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
+        navMeshAgent.speed = speed;
         state = startingState;
     }
 
@@ -78,12 +88,29 @@ public class ChasingEnemyAI : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
         {
-            transform.position = this.transform.position;
+            //transform.position = this.transform.position;
+            navMeshAgent.speed = 0;
         }
         else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
         {
+            navMeshAgent.speed = speed;
             retreating();
         }
+        else
+        {
+            navMeshAgent.speed = speed;
+        }
+
+        if (timeBtwShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+
     }
 
     public void retreating()
