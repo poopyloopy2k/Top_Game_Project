@@ -18,6 +18,11 @@ public class ChasingEnemyAI : MonoBehaviour
     private Vector3 startingPosition;
     private Transform player; // —сылка на игрока
 
+    public float stoppingDistance;
+    public float retreatDistance;
+
+
+
     private enum State
     {
         Roaming,
@@ -71,6 +76,23 @@ public class ChasingEnemyAI : MonoBehaviour
         {
             state = State.Roaming;
         }
+        else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
+        {
+            transform.position = this.transform.position;
+        }
+        else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
+        {
+            retreating();
+        }
+    }
+
+    public void retreating()
+    {
+        Vector3 retreatDirection = transform.position - player.position;
+        retreatDirection.Normalize();
+
+        Vector3 retreatPosition = transform.position + retreatDirection;
+        navMeshAgent.SetDestination(retreatPosition);
     }
 
     private void CheckForPlayer()
