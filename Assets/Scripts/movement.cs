@@ -99,7 +99,6 @@ public class Player2DControl : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Collision"))
         {
-            Debug.Log("Collision here");
             audioManager.PlaySFX(audioManager.wallCollision);
         }
     }

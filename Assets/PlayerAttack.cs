@@ -37,7 +37,6 @@ public class PlayerAttack : MonoBehaviour
         if(other.tag == "Enemy")
         {
             
-            
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
             Debug.Log("Enemy hit");
         }
