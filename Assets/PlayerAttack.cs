@@ -9,7 +9,11 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float meleeSpeed;
     [SerializeField] private int damage;
     float timeUntilMelee;
-
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update()
     {
         if (timeUntilMelee <= 0f) 
@@ -18,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
             {
                 anim.SetTrigger("Attack");
                 timeUntilMelee = meleeSpeed;
+                audioManager.PlaySFX(audioManager.swordHit);
+               
             }
             
         }
@@ -30,6 +36,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            
+            
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
             Debug.Log("Enemy hit");
         }

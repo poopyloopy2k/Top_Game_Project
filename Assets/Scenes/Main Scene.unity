@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1239208663}
   meleeSpeed: 0.2
-  damage: 50
+  damage: 20
 --- !u!1001 &1240701178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9555,7 +9555,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1663631891, guid: 6e544896c66a3db468e442e352bf1e1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10143,9 +10143,14 @@ MonoBehaviour:
   musicSource: {fileID: 1774855887}
   SFXSource: {fileID: 1011673115}
   death: {fileID: 8300000, guid: a1286d225f7d8694192354ea4d37652e, type: 3}
+  background: {fileID: 8300000, guid: 57b5b1379ab07b742aac3111c4797f2c, type: 3}
   wallCollision: {fileID: 8300000, guid: fe6afcc6cdd15624193ac7b12a99b743, type: 3}
   hurt: {fileID: 8300000, guid: 22f02682bc1265a448b5dbf79962c99c, type: 3}
   coin: {fileID: 8300000, guid: b482cdc6295362042a5f6369bc206b11, type: 3}
+  swordHit: {fileID: 8300000, guid: a041263b632502b4490087effe83b167, type: 3}
+  spider: {fileID: 8300000, guid: 4058293db63923846a0fea45afe12826, type: 3}
+  spiderDeath: {fileID: 8300000, guid: 141abc01631df4848b7d82317543fbfd, type: 3}
+  spiderHurt: {fileID: 8300000, guid: 31cf8df04900a6c4c9324dd006d5160b, type: 3}
 --- !u!4 &1887924108
 Transform:
   m_ObjectHideFlags: 0
