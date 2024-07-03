@@ -40,5 +40,13 @@ public class PlayerAttack : MonoBehaviour
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
             Debug.Log("Enemy hit");
         }
+        if (other.CompareTag("Chest"))
+        {
+            Chest chest = other.GetComponent<Chest>();
+            if (chest != null)
+            {
+                chest.OpenChest();
+            }
+        }
     }
 }

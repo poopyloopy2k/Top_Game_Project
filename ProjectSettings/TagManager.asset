@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Audio
   - Collision
+  - Chest
   layers:
   - Default
   - TransparentFX

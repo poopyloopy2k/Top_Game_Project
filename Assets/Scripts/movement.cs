@@ -90,14 +90,13 @@ public class Player2DControl : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Coin"))
-        {   
+        if (other.gameObject.CompareTag("Coin"))
+        {
             Destroy(other.gameObject);
             cm.coinCount++;
             audioManager.PlaySFX(audioManager.coin);
-            
         }
-        if(other.gameObject.CompareTag("Collision"))
+        else if (other.gameObject.CompareTag("Collision"))
         {
             audioManager.PlaySFX(audioManager.wallCollision);
         }
