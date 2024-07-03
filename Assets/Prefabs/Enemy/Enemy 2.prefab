@@ -12,9 +12,41 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1859990079, guid: 7418f159c4cf8e7409769e651da29fc4, type: 3}
+    - target: {fileID: 1795960285442258496, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8507836
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795960285442258496, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6628458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795960285442258496, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.011663593
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795960285442258496, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7019892
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795960285442258496, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2539385974855025216, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
       propertyPath: m_Name
       value: Enemy 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476353530411989545, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476353530411989545, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476353530411989545, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3476353530411989545, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +88,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7753632580829809386, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3618646189724626173, guid: b0b4f548c31610d4a91f529429b6435a, type: 3}
     m_RemovedGameObjects: []
@@ -82,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ff128b4db68284db514dfdfd1a19ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: 1
+  startingState: 0
   roamingDistanceMin: 7
   roamingDistanceMax: 3
   roamingTimerMax: 2
