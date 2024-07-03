@@ -1,18 +1,24 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
 public class Player2DControl : MonoBehaviour
 {
+    public TextMeshProUGUI HealthText;
+    public TextMeshProUGUI AmmoText;
     public float speed;
     public int currentHealth;
     public int maxHealth = 100;
+    public int currentAmmo;
+    public int maxAmmo;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 moveVelocity;
     //Добавил CoinManager для подбора монет
     public CoinManager cm;
     public HealthBar healthBar;
+    public AmmoBar AmmoBar;
     public GameObject deathPanel;
     private SpriteRenderer spriteRenderer;
     //Для звука
@@ -26,14 +32,18 @@ public class Player2DControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
+        currentAmmo = maxAmmo;
         healthBar.SetMaxHealth(maxHealth);
+        AmmoBar.SetMaxAmmo(maxAmmo);
+        UpdateStats();
+
     }
     public void TakeDamage(int damage)
     {
         audioManager.PlaySFX(audioManager.hurt);
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        if(currentHealth <= 0 )
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -77,13 +87,14 @@ public class Player2DControl : MonoBehaviour
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-        if(Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(20);
         }
+        UpdateStats();
 
     }
-    
+
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
@@ -100,5 +111,27 @@ public class Player2DControl : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.wallCollision);
         }
+    }
+    public void GetHealth(int health)
+    {
+        this.currentHealth += health;
+        this.currentHealth = Mathf.Clamp(this.currentHealth, 0, maxHealth);
+        healthBar.slider.value = currentHealth;
+        
+        UpdateStats();
+
+    }
+    public void GetAmmo(int ammo)
+    {
+        this.currentAmmo += ammo;
+        this.currentAmmo = Mathf.Clamp(this.currentAmmo, 0, maxAmmo);
+        
+        UpdateStats();
+
+    }
+    private void UpdateStats()
+    {
+        HealthText.text = $"{currentHealth}/{maxHealth}";
+        AmmoText.text = $"{currentAmmo}/{maxAmmo}";
     }
 }
