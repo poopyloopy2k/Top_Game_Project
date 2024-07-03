@@ -9,8 +9,10 @@ public class Collectable : MonoBehaviour
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] public int price;
     [Header("PotionSettings")]
-    [SerializeField] public int health; 
+    [SerializeField] public int health;
     [SerializeField] public int ammo;
+    [Header("WeaponSettings")]
+    [SerializeField] private GameObject weapon;
 
     public enum CollectableType
     {
@@ -28,12 +30,13 @@ public class Collectable : MonoBehaviour
             player.cm.coinCount -= price;
             if (type == CollectableType.Potion)
             {
-                player.GetHealth(health); 
+                player.GetHealth(health);
                 Destroy(gameObject);
             }
             else if (type == CollectableType.Weapon)
             {
-                // Добавьте свою логику для получения оружия здесь
+                player.GetComponent<Inventory>().AddWeapon(weapon);
+                Destroy(gameObject); // Удаление оружия после добавления в инвентарь
             }
         }
     }
