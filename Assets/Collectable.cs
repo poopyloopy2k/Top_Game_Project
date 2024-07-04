@@ -5,20 +5,15 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    [SerializeField] private CollectableType type;
+
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] public int price;
     [Header("PotionSettings")]
     [SerializeField] public int health;
     [SerializeField] public int ammo;
-    [Header("WeaponSettings")]
-    [SerializeField] private GameObject weapon;
 
-    public enum CollectableType
-    {
-        Weapon,
-        Potion
-    }
+
+
 
     private bool isPlayerInRange = false;
     private Player2DControl player;
@@ -28,16 +23,10 @@ public class Collectable : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && player.cm.coinCount >= price)
         {
             player.cm.coinCount -= price;
-            if (type == CollectableType.Potion)
-            {
+
                 player.GetHealth(health);
                 Destroy(gameObject);
-            }
-            else if (type == CollectableType.Weapon)
-            {
-                player.GetComponent<Inventory>().AddWeapon(weapon);
-                Destroy(gameObject); // Удаление оружия после добавления в инвентарь
-            }
+
         }
     }
 

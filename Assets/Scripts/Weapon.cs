@@ -1,36 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    Camera cam;
-    public bool isPlayer;
     public GameObject item;
-    public bool isPickedUp = false;
+    [SerializeField] private GameObject bulletPrefab; // Префаб пули
+    [SerializeField] private Transform firePoint; // Точка стрельбы
+    [SerializeField] private float bulletSpeed = 10f; // Скорость пули
 
-    private void Start()
+    void Update()
     {
-        transform.SetLocalPositionAndRotation(Vector2.zero, Quaternion.identity);
-        cam = FindObjectOfType<Camera>();
-    }
-
-    private void FixedUpdate()
-    {
-        if (isPickedUp)
+        RotateWeapon();
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            Vector2 currentPos = cam.ScreenToWorldPoint(Input.mousePosition);
-            float a = Mathf.Atan2(-currentPos.x, currentPos.y) + Mathf.Rad2Deg;
+            Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void RotateWeapon()
     {
-        if (other.CompareTag("Player") && !isPickedUp)
-        {
-            other.GetComponent<Inventory>().AddWeapon(gameObject);
-            isPickedUp = true;
-            gameObject.SetActive(false);
-        }
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePosition - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 }

@@ -1,7 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Animator anim;
@@ -29,7 +29,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (timeUntilMelee <= 0f)
         {
-            if (Input.GetMouseButtonDown(0)) 
+            if (Input.GetMouseButtonDown(0))
             {
                 if (inventory.hotWeapon == -1)
                 {
@@ -45,8 +45,24 @@ public class PlayerAttack : MonoBehaviour
         {
             timeUntilMelee -= Time.deltaTime;
         }
+        RotateWeapon();
     }
+    private void RotateWeapon()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePosition - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
+        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        if (Input.mousePosition.x < playerScreenPoint.x)
+        {
+            firePoint.rotation = Quaternion.Euler(0, -180, -angle);
+        }
+        else
+        {
+            firePoint.rotation = Quaternion.Euler(0, 0, angle);
+        }
+    }
     private void MeleeAttack()
     {
         anim.SetTrigger("Attack");
@@ -58,7 +74,7 @@ public class PlayerAttack : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = firePoint.up * bulletSpeed;
+        rb.velocity = firePoint.right * bulletSpeed;
         // Возможно, добавить анимацию стрельбы и звук
     }
 

@@ -1,39 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.TextCore.Text;
 
-public class Projectile : MonoBehaviour
-{
-    public float speed;
-    private Transform player;
-    private Vector2 target;
-
-    private void Start()
+    public class Projectile : MonoBehaviour
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector2(player.position.x, player.position.y);
-    }
+        public float speed = 5f;
+        public float lifetime = 5f; // Время жизни пули
+        [SerializeField] private int damage;
 
-    private void Update()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        private Vector2 direction;
 
-        if (transform.position.x == target.x && transform.position.y == target.y)
+        private void Start()
         {
-            destroyProjectile();
+            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (player != null)
+            {
+                direction = ((Vector2)player.position - (Vector2)transform.position).normalized;
+            }
+            else
+            {
+                direction = Vector2.zero; // Пуля не будет двигаться, если игрок не найден
+            }
+
+            // Уничтожаем пулю через 'lifetime' секунд
+            Destroy(gameObject, lifetime);
+        }
+
+        private void Update()
+        {
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            { 
+
+            other.GetComponent<Player2DControl>().TakeDamage(damage); 
+            DestroyProjectile(); 
+            Debug.Log("damage to player");
+                
+            }
+        }
+
+        private void DestroyProjectile()
+        {
+            Destroy(gameObject);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            destroyProjectile();
-        }
-    }
-
-    private void destroyProjectile()
-    {
-        Destroy(gameObject);
-    }
-}
