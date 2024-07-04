@@ -10154,6 +10154,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4122722697277744590, guid: 8ed06017225d3a343a34ee1625afc537, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 8a3719ad45e5e3347b14856125d6cda1, type: 2}
     - target: {fileID: 5845663538653745140, guid: 8ed06017225d3a343a34ee1625afc537, type: 3}
       propertyPath: m_Name
       value: NavMeshSurface
@@ -11548,6 +11552,7 @@ GameObject:
   - component: {fileID: 2146279334}
   - component: {fileID: 2146279333}
   - component: {fileID: 2146279332}
+  - component: {fileID: 2146279335}
   m_Layer: 0
   m_Name: Collisions
   m_TagString: Collision
@@ -15223,6 +15228,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2146279335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146279328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1653219525144372192
 PrefabInstance:
   m_ObjectHideFlags: 0
