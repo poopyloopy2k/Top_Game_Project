@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 22
+  damage: 10
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!70 &8899250799061712618
 CapsuleCollider2D:

@@ -9,6 +9,9 @@ public class Bullet : MonoBehaviour
 
 
     [SerializeField] private float moveSpeed = 22f;
+    [SerializeField] private int damage;
+    AmmoBar ammoBar;
+
     public Vector3 moveDirection;
     private void Start()
     {
@@ -27,5 +30,25 @@ public class Bullet : MonoBehaviour
     public void SetMoveDirection(Vector3 direction)
     {
         moveDirection = direction.normalized;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+            
+        }
+        if (other.CompareTag("Chest"))
+            {
+                Chest chest = other.GetComponent<Chest>();
+                if (chest != null)
+                {
+                    chest.OpenChest();
+                }
+            }
     }
 }

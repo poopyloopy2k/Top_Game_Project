@@ -42,8 +42,6 @@ public class Chest : MonoBehaviour
                     rb.AddForce(randomOffset.normalized * randomForce, ForceMode2D.Impulse);
                 }
 
-                // ¬оспроизводим звук выпадени€ монеты
-                //audioManager.PlaySFX(audioManager.coinDropSound);
             }
         }
     }
