@@ -36,9 +36,8 @@ public class Inventory : MonoBehaviour
 
     private void HandleWeaponSwitching()
     {
-        // Переключение оружия с помощью колесика мыши
         int scroll = Convert.ToInt32(Input.GetAxisRaw("Mouse ScrollWheel") * 10);
-        if (scroll != 0)
+        if (weapons.Count > 0 && scroll != 0)
         {
             hotWeapon += scroll;
             if (hotWeapon > weapons.Count - 1)
@@ -52,7 +51,6 @@ public class Inventory : MonoBehaviour
             SetHotWeapon(hotWeapon);
         }
 
-        // Переключение оружия с помощью клавиш 1 и 2
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SetHotWeapon(-1); // Выбор меча
@@ -75,10 +73,7 @@ public class Inventory : MonoBehaviour
         }
         if (hotWeapon == -1)
         {
-            if (sword != null)
-            {
-                sword.SetActive(true);
-            }
+            sword.SetActive(true);
         }
         else if (hotWeapon >= 0 && hotWeapon < weapons.Count)
         {
@@ -88,7 +83,7 @@ public class Inventory : MonoBehaviour
 
     public void AddWeapon(GameObject weapon)
     {
-        if (weapons.Count < maxWeapon + 1) // +1 потому что меч всегда доступен
+        if (weapons.Count < maxWeapon)
         {
             GameObject w = Instantiate(weapon, hand);
             w.GetComponent<Weapon>();

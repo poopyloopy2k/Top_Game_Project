@@ -37,6 +37,7 @@ public class Player2DControl : MonoBehaviour
         AmmoBar.SetMaxAmmo(maxAmmo);
         UpdateStats();
 
+
     }
     public void TakeDamage(int damage)
     {
@@ -62,7 +63,6 @@ public class Player2DControl : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetHealth(maxHealth);
         cm.ResetCoins();
-        transform.position = Vector2.zero;
         deathPanel.SetActive(false);
         gameObject.SetActive(true);
 
@@ -117,7 +117,7 @@ public class Player2DControl : MonoBehaviour
         this.currentHealth += health;
         this.currentHealth = Mathf.Clamp(this.currentHealth, 0, maxHealth);
         healthBar.slider.value = currentHealth;
-        
+
         UpdateStats();
 
     }
@@ -125,7 +125,7 @@ public class Player2DControl : MonoBehaviour
     {
         this.currentAmmo += ammo;
         this.currentAmmo = Mathf.Clamp(this.currentAmmo, 0, maxAmmo);
-        
+
         UpdateStats();
 
     }
