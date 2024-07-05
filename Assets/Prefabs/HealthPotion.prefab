@@ -143,8 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dca6cf0879903c4d897990199c59205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
   priceText: {fileID: 0}
-  price: 0
+  price: 5
   health: 20
   ammo: 0
