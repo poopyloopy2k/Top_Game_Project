@@ -7,6 +7,5 @@ public class MainControls : MonoBehaviour
     public void ExitPressed()
     {
         Application.Quit();
-        Debug.Log("Exit pressed!");
     }
 }
